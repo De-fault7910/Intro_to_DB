@@ -1,4 +1,4 @@
--- Get full description of the 'books' table
+-- Get full description of the 'books' table in alx_book_store
 SELECT 
     COLUMN_NAME AS 'Column',
     COLUMN_TYPE AS 'Type',
@@ -7,7 +7,6 @@ SELECT
     COLUMN_DEFAULT AS 'Default',
     EXTRA AS 'Extra'
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE()  -- Uses the database passed as argument
+WHERE TABLE_SCHEMA = 'alx_book_store'
   AND TABLE_NAME = 'Books'
 ORDER BY ORDINAL_POSITION;
-
